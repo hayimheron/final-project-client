@@ -10,10 +10,10 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import NewStudentView from '../views/NewStudentView';
+import EnrollNewStudentView from '../views/EnrollNewStudentView';
 import { addStudentThunk } from '../../store/thunks';
 
-class NewStudentContainer extends Component {
+class EnrollNewStudentContainer extends Component {
   // Initialize state
   constructor(props){
     super(props);
@@ -39,11 +39,10 @@ class NewStudentContainer extends Component {
   // Take action after user click the submit button
   handleSubmit = async event => {
     event.preventDefault();  // Prevent browser reload/refresh after submit.
-
     let student = {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
-        campusId: this.state.campusId,
+        campusId: this.props.location.query.campus_id,
         email: this.state.email,
         imageurl: this.state.imageurl,
         gpa: this.state.gpa
@@ -61,7 +60,7 @@ class NewStudentContainer extends Component {
       email: "",
       campusId: null, 
       redirect: true, 
-      redirectId: newStudent.id
+      redirectId: student.campusId
     });
   }
 
@@ -73,18 +72,19 @@ class NewStudentContainer extends Component {
   // Render new student input form
   render() {
     // Redirect to new student's page after submit
-    if(this.state.redirect) {
-      return (<Redirect to={`/student/${this.state.redirectId}`}/>)
-    }
 
     // Display the input form via the corresponding View component
     return (
       <div>
         <Header />
-        <NewStudentView 
+        <EnrollNewStudentView
+          campus_id = {this.props.location.query} 
           handleChange = {this.handleChange} 
           handleSubmit={this.handleSubmit}      
         />
+        {this.state.redirect && (
+            <Redirect to={`/campus/${this.state.redirectId}`} />
+        )}
       </div>          
     );
   }
@@ -96,10 +96,11 @@ class NewStudentContainer extends Component {
 const mapDispatch = (dispatch) => {
     return({
         addStudent: (student) => dispatch(addStudentThunk(student)),
+        enrollNewStudent: (student) => dispatch(enrollNewStudentThunk(student)),
     })
 }
 
 // Export store-connected container by default
 // NewStudentContainer uses "connect" function to connect to Redux Store and to read values from the Store 
 // (and re-read the values when the Store State updates).
-export default connect(null, mapDispatch)(NewStudentContainer);
+export default connect(null, mapDispatch)(EnrollNewStudentContainer);
