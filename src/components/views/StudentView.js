@@ -15,7 +15,7 @@ const StudentView = (props) => {
       <h1>{student.firstname + " " + student.lastname}</h1>
       <div style={{backgroundColor:"white", paddingTop:"2em", paddingBottom:"2em", marginRight:"10em", marginLeft:"10em"}}>
         <img
-          src={student.imageurl || "https://www.pngfind.com/pngs/m/163-1631127_student-school-study-skills-college-test-students-pictures.png"}  // Use default if imageUrl is falsy
+          src={student.imageurl || "https://www.timeshighereducation.com/sites/default/files/styles/article785xauto/public/capture_1.png"}  // Use default if imageUrl is falsy
           style={{ maxWidth: '100%', maxHeight: '100px', borderRadius:'50%', height:'auto', maxWidth:'100%' }}  // Adjust styling as needed
         />
         <p>First Name: {student.firstname}</p>
