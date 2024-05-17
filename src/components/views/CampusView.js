@@ -19,9 +19,9 @@ const CampusView = (props) => {
       <p>{campus.description}</p>
       <div style={{ marginTop: '0.5em' }}>
       <Link to={`/editcampus/${campus.id}`}>
-          <Button style={{ color: "white", backgroundColor: "#333", marginRight:"0.5em", borderRadius: '4px' }}>Edit Campus</Button>
+          <Button style={{ color: "black", backgroundColor: "white", marginRight:"0.5em", borderRadius: '4px' }}>Edit Campus</Button>
         </Link>
-        <Button style={{color:"white", backgroundColor:"#ff6f61", borderRadius: '4px'}} onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
+        <Button style={{color:"black", backgroundColor:"white", borderRadius: '4px'}} onClick={() => deleteCampus(campus.id)}>Delete Campus</Button>
       </div>
       <h3>Total Students Enrolled: {campus.students.length}</h3>
       {/* Table for student information, only display if there are students enrolled */}
@@ -41,7 +41,7 @@ const CampusView = (props) => {
                     <Link to={`/student/${student.id}`}>{student.firstname} {student.lastname}</Link>
                   </td>
                   <td style={{ border: '1px solid #333', padding: '0.5em' }}>
-                    <Button style={{ color: "white", backgroundColor: "#ff6f61", borderRadius: '4px' }} onClick={() => unenrollStudent(student)}>Unenroll</Button>
+                    <Button style={{ color: "black", backgroundColor: "white", borderRadius: '4px' }} onClick={() => unenrollStudent(student)}>Unenroll</Button>
                   </td>
                 </tr>
               ))}
@@ -53,7 +53,7 @@ const CampusView = (props) => {
         pathname: `/:id/enrollnew`,
         query: {campus_id}
         }}>
-        <Button style={{color:"white", backgroundColor:"#007b7f", borderRadius: '4px'}}>Enroll New Student</Button>
+        <Button style={{color:"black", backgroundColor:"white", borderRadius: '4px'}}>Enroll New Student</Button>
       </Link>
       <br></br>
       <br></br>
@@ -61,7 +61,7 @@ const CampusView = (props) => {
         pathname: `/enrollexisting`,
         query: {campus_id}
       }}>
-          <Button style={{color:"white", backgroundColor:"#007b7f", borderRadius: '4px'}}>Enroll Existing Student</Button>
+          <Button style={{color:"black", backgroundColor:"white", borderRadius: '4px'}}>Enroll Existing Student</Button>
       </Link>
       </div>
     </div>
