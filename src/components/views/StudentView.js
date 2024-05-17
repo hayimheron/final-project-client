@@ -40,9 +40,9 @@ const StudentView = (props) => {
 
       <div style={{ marginTop: '1em' }}>
         <Link to={`/editstudent/${student.id}`}>
-          <Button style={{color:"white", backgroundColor:"grey", marginRight:"0.5em"}}>Edit Student</Button>
+          <Button style={{color:"black", backgroundColor:"white", marginRight:"0.5em"}}>Edit Student</Button>
         </Link>
-        <Button style={{color:"white", backgroundColor:"coral"}} onClick={() => deleteStudent(student.id)}>Delete Student</Button>
+        <Button style={{color:"black", backgroundColor:"white"}} onClick={() => deleteStudent(student.id)}>Delete Student</Button>
       </div>
       </div>
     </div>
