@@ -15,7 +15,7 @@ const AllStudentsView = (props) => {
     <div style={{paddingTop:"1em"}}>
       <p>There are no students.</p>
       <Link to={`newstudent`}>
-        <Button style={{color:"white", backgroundColor:"white"}}>Add New Student</Button>
+        <Button style={{color:"black", backgroundColor:"white"}}>Add New Student</Button>
       </Link>
     </div>
     );
@@ -46,7 +46,7 @@ const AllStudentsView = (props) => {
       )}
       <br/>
       <Link to={`/newstudent`}>
-        <Button style={{color:"white", backgroundColor:"white"}}>Add New Student</Button>
+        <Button style={{color:"black", backgroundColor:"white"}}>Add New Student</Button>
       </Link>
       <br/><br/>
     </div>
