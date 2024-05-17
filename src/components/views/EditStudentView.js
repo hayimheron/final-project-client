@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles( () => ({
     formContainer:{  
       width: '500px',
-      backgroundColor: '#f0f0f5',
+      backgroundColor: 'white',
       borderRadius: '5px',
       margin: 'auto',
     },
@@ -16,11 +16,11 @@ const useStyles = makeStyles( () => ({
       textDecoration: 'none'
     }, 
     customizeAppBar:{
-      backgroundColor: '#11153e',
+      backgroundColor: 'white',
       shadows: ['none'],
     },
     formTitle:{
-      backgroundColor:'#c5c8d6',
+      backgroundColor:'white',
       marginBottom: '15px',
       textAlign: 'center',
       borderRadius: '5px 5px 0px 0px',
@@ -37,43 +37,43 @@ const EditStudentView = (props) => {
         <div className={classes.root}>
         <div className={classes.formContainer}>
           <div className={classes.formTitle}>
-            <Typography style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: '#11153e'}}>
+            <Typography style={{fontWeight: 'bold', fontFamily: 'Courier, sans-serif', fontSize: '20px', color: 'black'}}>
               Editing {student.firstname}'s Information
             </Typography>
           </div>
         <form style={{textAlign: 'center'}} onSubmit={(e) => handleSubmit(e)}>
-            <label style= {{color:'#11153e', fontWeight: 'bold'}}>First Name: </label>
+            <label style= {{color:'black', fontWeight: 'bold'}}>First Name: </label>
             <input type="text" name="firstname" defaultValue={student.firstname} required onChange ={(e) => handleChange(e)} />
             <br/>
             <br/>
 
-            <label style={{color:'#11153e', fontWeight: 'bold'}}>Last Name: </label>
+            <label style={{color:'black', fontWeight: 'bold'}}>Last Name: </label>
             <input type="text" name="lastname" defaultValue={student.lastname} required onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
-            <label style={{ color: '#11153e', fontWeight: 'bold' }}>Email: </label>
+            <label style={{ color: 'black', fontWeight: 'bold' }}>Email: </label>
             <input type="email" name="email" defaultValue={student.email} required onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
-            <label style={{ color: '#11153e', fontWeight: 'bold' }}>Image URL: </label>
+            <label style={{ color: 'black', fontWeight: 'bold' }}>Image URL: </label>
             <input type="text" name="imageurl" defaultValue={student.imageurl} onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
-            <label style={{ color: '#11153e', fontWeight: 'bold'}}>GPA: </label>
+            <label style={{ color: 'black', fontWeight: 'bold'}}>GPA: </label>
             <input type="number" step="0.1" min="0" max="4" name="gpa" defaultValue={student.gpa} onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
-            <label style={{color:'#11153e', fontWeight: 'bold'}}>Campus ID: </label>
+            <label style={{color:'black', fontWeight: 'bold'}}>Campus ID: </label>
             <input type="text" name="campusId" defaultValue={student.campusId} onChange={(e) => handleChange(e)} />
             <br/>
             <br/>
 
             <Button variant="contained" color="primary" type="submit">
-                Save Changes
+                Save
             </Button>
         </form>
         <br/>
