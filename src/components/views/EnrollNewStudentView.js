@@ -12,15 +12,15 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   formContainer: {
     width: '400px',
-    backgroundColor: '#f9f9f9',
+    backgroundColor: 'white',
     borderRadius: '5px',
     margin: 'auto',
     padding: '20px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   },
   formTitle: {
-    backgroundColor: '#333',
-    color: '#fff',
+    backgroundColor: 'white',
+    color: 'black',
     fontWeight: 'bold',
     fontSize: '24px',
     padding: '10px',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
   },
   label: {
-    color: '#333',
+    color: 'black',
     fontWeight: 'bold',
   },
   input: {
@@ -42,8 +42,8 @@ const useStyles = makeStyles(() => ({
   },
   button: {
     width: '100%',
-    backgroundColor: '#333',
-    color: '#fff',
+    backgroundColor: 'white',
+    color: 'black',
     padding: '10px',
     borderRadius: '3px',
     border: 'none',
