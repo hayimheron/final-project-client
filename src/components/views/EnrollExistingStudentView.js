@@ -19,7 +19,7 @@ const AllStudentsView = (props) => {
       <div>
         <h3>No students to enroll!</h3>
         <Link to={`/campuses`}>
-          <Button style={{ color: "#fff", backgroundColor: "#333", marginRight: "0.5em" }}>Go Back to All Campuses</Button>
+          <Button style={{ color: "black", backgroundColor: "white", marginRight: "0.5em" }}>Go Back to All Campuses</Button>
         </Link>
       </div>
     );
@@ -42,7 +42,7 @@ const AllStudentsView = (props) => {
             />
             <br />
             <br />
-            <Button style={{ color: '#fff', backgroundColor: 'coral', borderRadius: '4px', marginBottom: '1em' }} onClick={() => handleEnrollClick(student.id, campus_id)}>
+            <Button style={{ color: 'black', backgroundColor: 'white', borderRadius: '4px', marginBottom: '1em' }} onClick={() => handleEnrollClick(student.id, campus_id)}>
               Enroll Student
             </Button>
             <br />
@@ -53,7 +53,7 @@ const AllStudentsView = (props) => {
 
       <br />
       <Link to={`/campuses`}>
-        <Button style={{ color: "#fff", backgroundColor: "#333", marginTop: '1em' }}>Go Back to All Campuses</Button>
+        <Button style={{ color: "black", backgroundColor: "white", marginTop: '1em' }}>Go Back to All Campuses</Button>
       </Link>
     </div>
   );
